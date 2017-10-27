@@ -19,7 +19,7 @@ func _fixed_process(delta):
 			$playerAnimator.play("up")
 	elif Input.is_action_just_released("up") and $playerAnimator.get_current_animation() == "up":
 		$playerAnimator.stop() #Later this will instead set an idle
-							   #animation to play
+		$playerSprite.frame = 29 #animation to play
 
 	#Walk down.
 	if Input.is_action_pressed("down"):
@@ -28,6 +28,7 @@ func _fixed_process(delta):
 			$playerAnimator.play("down")
 	elif Input.is_action_just_released("down") and $playerAnimator.get_current_animation() == "down":
 		$playerAnimator.stop()
+		$playerSprite.frame = 4
 	
 	#Walk left
 	if Input.is_action_pressed("left"):
@@ -36,6 +37,7 @@ func _fixed_process(delta):
 			$playerAnimator.play("left")
 	elif Input.is_action_just_released("left") and $playerAnimator.get_current_animation() == "left":
 		$playerAnimator.stop()
+		$playerSprite.frame = 24
 	
 	#Walk right.
 	if Input.is_action_pressed("right"):
@@ -44,6 +46,7 @@ func _fixed_process(delta):
 			$playerAnimator.play("right")
 	elif Input.is_action_just_released("right") and $playerAnimator.get_current_animation() == "right":
 		$playerAnimator.stop()
+		$playerSprite.frame = 12
 		
 	self.move_and_slide(direction * speed)
 	$meatCount.set_text("Goblin Meat: " + str(Global.shittyMeatOwned))
