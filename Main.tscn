@@ -8,17 +8,17 @@
 [ext_resource path="res://Graphics/dirt.png" type="Texture" id=6]
 [ext_resource path="res://Graphics/chefSheet.png" type="Texture" id=7]
 
-[sub_resource type="Gradient" id=6]
+[sub_resource type="Gradient" id=1]
 
 offsets = PoolRealArray( 0, 0.0116959, 0.0175439, 0.994152, 1 )
 colors = PoolColorArray( 0, 0, 0, 1, 0.105263, 0.105263, 0.105263, 1, 0.381861, 0.381861, 0.381861, 1, 0.678947, 0.678947, 0.678947, 1, 1, 1, 1, 1 )
 
-[sub_resource type="GradientTexture" id=7]
+[sub_resource type="GradientTexture" id=2]
 
-gradient = SubResource( 6 )
+gradient = SubResource( 1 )
 width = 2048
 
-[sub_resource type="ParticlesMaterial" id=8]
+[sub_resource type="ParticlesMaterial" id=3]
 
 trail_divisor = 1
 emission_shape = 2
@@ -47,7 +47,7 @@ angle = 0.0
 angle_random = 0.0
 scale = 3.0
 scale_random = 1.0
-color_ramp = SubResource( 7 )
+color_ramp = SubResource( 2 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -57,14 +57,13 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Emission Shape", "Flags", "Hue Variation", "Initial Velocity", "Linear Accel", "Radial Accel", "Scale" ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 221.181, 13.5559 )
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=5]
 
-resource_name = "down"
 length = 0.7
 loop = false
 step = 0.1
@@ -91,9 +90,8 @@ tracks/1/keys = {
 "values": [ false, true, false ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=6]
 
-resource_name = "left"
 length = 0.7
 loop = false
 step = 0.1
@@ -120,9 +118,8 @@ tracks/1/keys = {
 "values": [ false, true, false ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=7]
 
-resource_name = "right"
 length = 0.7
 loop = false
 step = 0.1
@@ -149,9 +146,8 @@ tracks/1/keys = {
 "values": [ false, true, false ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=8]
 
-resource_name = "up"
 length = 0.7
 loop = false
 step = 0.1
@@ -290,7 +286,7 @@ position = Vector2( 0, 285.038 )
 emitting = false
 amount = 40
 lifetime = 0.1
-one_shot = false
+one_shot = true
 preprocess = 0.0
 speed_scale = 0.5
 explosiveness = 0.0
@@ -300,7 +296,7 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 720909
-process_material = SubResource( 8 )
+process_material = SubResource( 3 )
 texture = ExtResource( 6 )
 normal_map = null
 h_frames = 1
@@ -361,7 +357,7 @@ _sections_unfolded = [ "Smoothing", "Transform" ]
 
 position = Vector2( -6.3479, 243.32 )
 scale = Vector2( 0.319347, 3.46774 )
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="playerAnimator" type="AnimationPlayer" parent="Player"]
@@ -369,10 +365,10 @@ _sections_unfolded = [ "Transform" ]
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 root_node = NodePath("..")
-anims/down = SubResource( 2 )
-anims/left = SubResource( 3 )
-anims/right = SubResource( 4 )
-anims/up = SubResource( 5 )
+anims/down = SubResource( 5 )
+anims/left = SubResource( 6 )
+anims/right = SubResource( 7 )
+anims/up = SubResource( 8 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
