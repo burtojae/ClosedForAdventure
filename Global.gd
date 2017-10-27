@@ -1,5 +1,5 @@
 extends Node
-#This is a test.
+#This is also a test
 const currentGoblinDefault = ""
 const shittyMeatOwnedDefault = 0
 const deadGoblinsOverworldDefault = []
