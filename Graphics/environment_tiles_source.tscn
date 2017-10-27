@@ -1,0 +1,1499 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://graphics/towerDefense_tilesheet.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="environment_tiles" type="Node"]
+
+[node name="grass_dirt_path_topleft" type="Sprite" parent="."]
+
+position = Vector2( 32, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_grass_path_topleft" type="Sprite" parent="."]
+
+position = Vector2( 32, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_sand_path_topleft" type="Sprite" parent="."]
+
+position = Vector2( 32, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_rock_path_topleft" type="Sprite" parent="."]
+
+position = Vector2( 32, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_rock_path_topleft" type="Sprite" parent="."]
+
+position = Vector2( 512, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_rock_path_topleft" type="Sprite" parent="."]
+
+position = Vector2( 992, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_sand_path_topleft" type="Sprite" parent="."]
+
+position = Vector2( 512, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_sand_path_topleft" type="Sprite" parent="."]
+
+position = Vector2( 992, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_grass_path_topleft" type="Sprite" parent="."]
+
+position = Vector2( 512, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_grass_path_topleft" type="Sprite" parent="."]
+
+position = Vector2( 992, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_dirt_path_topleft" type="Sprite" parent="."]
+
+position = Vector2( 512, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_dirt_path_topleft" type="Sprite" parent="."]
+
+position = Vector2( 992, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_dirt_path_left" type="Sprite" parent="."]
+
+position = Vector2( 32, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_grass_path_left" type="Sprite" parent="."]
+
+position = Vector2( 32, 416 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 256, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_sand_path_left" type="Sprite" parent="."]
+
+position = Vector2( 32, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 448, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_rock_path_left" type="Sprite" parent="."]
+
+position = Vector2( 32, 992 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 640, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_rock_path_left" type="Sprite" parent="."]
+
+position = Vector2( 512, 992 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 640, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_rock_path_left" type="Sprite" parent="."]
+
+position = Vector2( 992, 992 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 640, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_sand_path_left" type="Sprite" parent="."]
+
+position = Vector2( 512, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 448, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_sand_path_left" type="Sprite" parent="."]
+
+position = Vector2( 992, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 448, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_grass_path_left" type="Sprite" parent="."]
+
+position = Vector2( 512, 416 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 256, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_grass_path_left" type="Sprite" parent="."]
+
+position = Vector2( 992, 416 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 256, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_dirt_path_left" type="Sprite" parent="."]
+
+position = Vector2( 512, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_dirt_path_left" type="Sprite" parent="."]
+
+position = Vector2( 992, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_dirt_path_bottomleft" type="Sprite" parent="."]
+
+position = Vector2( 32, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_grass_path_bottomleft" type="Sprite" parent="."]
+
+position = Vector2( 32, 512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_dirt_path_bottomleft2" type="Sprite" parent="."]
+
+position = Vector2( 32, 800 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 512, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_rock_path_bottomleft" type="Sprite" parent="."]
+
+position = Vector2( 32, 1088 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 704, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_rock_path_bottomleft" type="Sprite" parent="."]
+
+position = Vector2( 512, 1088 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 704, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_rock_path_bottomleft" type="Sprite" parent="."]
+
+position = Vector2( 992, 1088 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 704, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_sand_path_bottomleft" type="Sprite" parent="."]
+
+position = Vector2( 512, 800 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 512, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_sand_path_bottomleft" type="Sprite" parent="."]
+
+position = Vector2( 992, 800 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 512, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_grass_path_bottomleft" type="Sprite" parent="."]
+
+position = Vector2( 512, 512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_grass_path_bottomleft" type="Sprite" parent="."]
+
+position = Vector2( 992, 512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_dirt_path_bottomleft" type="Sprite" parent="."]
+
+position = Vector2( 512, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_dirt_path_bottomleft" type="Sprite" parent="."]
+
+position = Vector2( 992, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_dirt_path_top" type="Sprite" parent="."]
+
+position = Vector2( 128, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_grass_path_top" type="Sprite" parent="."]
+
+position = Vector2( 128, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_sand_path_top" type="Sprite" parent="."]
+
+position = Vector2( 128, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_rock_path_top" type="Sprite" parent="."]
+
+position = Vector2( 128, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_rock_path_top" type="Sprite" parent="."]
+
+position = Vector2( 608, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_rock_path_top" type="Sprite" parent="."]
+
+position = Vector2( 1088, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 704, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_sand_path_top" type="Sprite" parent="."]
+
+position = Vector2( 608, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_sand_path_top" type="Sprite" parent="."]
+
+position = Vector2( 1088, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 704, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_grass_path_top" type="Sprite" parent="."]
+
+position = Vector2( 608, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_grass_path_top" type="Sprite" parent="."]
+
+position = Vector2( 1088, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 704, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_dirt_path_top" type="Sprite" parent="."]
+
+position = Vector2( 608, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_dirt_path_top" type="Sprite" parent="."]
+
+position = Vector2( 1088, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 704, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_path_full" type="Sprite" parent="."]
+
+position = Vector2( 128, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_path_full" type="Sprite" parent="."]
+
+position = Vector2( 128, 416 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 256, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_path_full" type="Sprite" parent="."]
+
+position = Vector2( 608, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_path_full" type="Sprite" parent="."]
+
+position = Vector2( 1088, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 704, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_dirt_path_bottom" type="Sprite" parent="."]
+
+position = Vector2( 128, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_grass_path_bottom" type="Sprite" parent="."]
+
+position = Vector2( 128, 512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_sand_path_bottom" type="Sprite" parent="."]
+
+position = Vector2( 128, 800 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 512, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_rock_path_bottom" type="Sprite" parent="."]
+
+position = Vector2( 128, 1088 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 704, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_rock_path_bottom" type="Sprite" parent="."]
+
+position = Vector2( 608, 1088 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 704, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_rock_path_bottom" type="Sprite" parent="."]
+
+position = Vector2( 1088, 1088 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 704, 704, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_sand_path_bottom" type="Sprite" parent="."]
+
+position = Vector2( 608, 800 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 512, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_sand_path_bottom" type="Sprite" parent="."]
+
+position = Vector2( 1088, 800 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 704, 512, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_grass_path_bottom" type="Sprite" parent="."]
+
+position = Vector2( 608, 512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_grass_path_bottom" type="Sprite" parent="."]
+
+position = Vector2( 1088, 512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 704, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_dirt_path_bottom" type="Sprite" parent="."]
+
+position = Vector2( 608, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_dirt_path_bottom" type="Sprite" parent="."]
+
+position = Vector2( 1088, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 704, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_dirt_path_topright" type="Sprite" parent="."]
+
+position = Vector2( 224, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_grass_path_topright" type="Sprite" parent="."]
+
+position = Vector2( 224, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_sand_path_topright" type="Sprite" parent="."]
+
+position = Vector2( 224, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_rock_path_topright" type="Sprite" parent="."]
+
+position = Vector2( 224, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_rock_path_topright" type="Sprite" parent="."]
+
+position = Vector2( 704, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_rock_path_topright" type="Sprite" parent="."]
+
+position = Vector2( 1184, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_sand_path_topright" type="Sprite" parent="."]
+
+position = Vector2( 704, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_sand_path_topright" type="Sprite" parent="."]
+
+position = Vector2( 1184, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_grass_path_topright" type="Sprite" parent="."]
+
+position = Vector2( 704, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_grass_path_topright" type="Sprite" parent="."]
+
+position = Vector2( 1184, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_dirt_path_topright" type="Sprite" parent="."]
+
+position = Vector2( 704, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_dirt_path_topright" type="Sprite" parent="."]
+
+position = Vector2( 1184, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_dirt_path_tlcorner" type="Sprite" parent="."]
+
+position = Vector2( 800, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 512, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_dirt_path_trcorner" type="Sprite" parent="."]
+
+position = Vector2( 896, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_dirt_path_brcorner" type="Sprite" parent="."]
+
+position = Vector2( 896, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_dirt_path_blcorner" type="Sprite" parent="."]
+
+position = Vector2( 800, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 512, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_dirt_path_tlcorner" type="Sprite" parent="."]
+
+position = Vector2( 320, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_dirt_path_trcorner" type="Sprite" parent="."]
+
+position = Vector2( 416, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_dirt_path_brcorner" type="Sprite" parent="."]
+
+position = Vector2( 416, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_dirt_path_blcorner" type="Sprite" parent="."]
+
+position = Vector2( 320, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_dirt_path_right" type="Sprite" parent="."]
+
+position = Vector2( 224, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_grass_path_right" type="Sprite" parent="."]
+
+position = Vector2( 224, 416 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 256, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_sand_path_right" type="Sprite" parent="."]
+
+position = Vector2( 224, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 448, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_rock_path_right" type="Sprite" parent="."]
+
+position = Vector2( 224, 992 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 640, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_rock_path_right" type="Sprite" parent="."]
+
+position = Vector2( 704, 992 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 640, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_rock_path_right" type="Sprite" parent="."]
+
+position = Vector2( 1184, 992 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 640, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_sand_path_right" type="Sprite" parent="."]
+
+position = Vector2( 704, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 448, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_sand_path_right" type="Sprite" parent="."]
+
+position = Vector2( 1184, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 448, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_grass_path_right" type="Sprite" parent="."]
+
+position = Vector2( 704, 416 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 256, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_grass_path_right" type="Sprite" parent="."]
+
+position = Vector2( 1184, 416 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 256, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_dirt_path_right" type="Sprite" parent="."]
+
+position = Vector2( 704, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_dirt_path_right" type="Sprite" parent="."]
+
+position = Vector2( 1184, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_dirt_path_bottomright" type="Sprite" parent="."]
+
+position = Vector2( 224, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_grass_path_bottomright" type="Sprite" parent="."]
+
+position = Vector2( 224, 512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_sand_path_bottomright" type="Sprite" parent="."]
+
+position = Vector2( 224, 800 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 512, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_rock_path_bottomright" type="Sprite" parent="."]
+
+position = Vector2( 224, 1088 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 704, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_rock_path_bottomright" type="Sprite" parent="."]
+
+position = Vector2( 704, 1088 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 704, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_rock_path_bottomright" type="Sprite" parent="."]
+
+position = Vector2( 1184, 1088 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 704, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_rock_path_dot" type="Sprite" parent="."]
+
+position = Vector2( 1280, 1088 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 832, 704, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_rock_tlcorner" type="Sprite" parent="."]
+
+position = Vector2( 1280, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 832, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_rock_trcorner" type="Sprite" parent="."]
+
+position = Vector2( 1376, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_rock_brcorner" type="Sprite" parent="."]
+
+position = Vector2( 1376, 992 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 640, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_rock_blcorner" type="Sprite" parent="."]
+
+position = Vector2( 1280, 992 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 832, 640, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_rock_path_dot" type="Sprite" parent="."]
+
+position = Vector2( 800, 1088 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 512, 704, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_rock_path_tlcorner" type="Sprite" parent="."]
+
+position = Vector2( 800, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 512, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_rock_path_trcorner" type="Sprite" parent="."]
+
+position = Vector2( 896, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_rock_path_brcorner" type="Sprite" parent="."]
+
+position = Vector2( 896, 992 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 640, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_rock_path_blcorner" type="Sprite" parent="."]
+
+position = Vector2( 800, 992 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 512, 640, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="plainrock_full" type="Sprite" parent="."]
+
+position = Vector2( 416, 1088 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 704, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_rock_path_dot" type="Sprite" parent="."]
+
+position = Vector2( 320, 1088 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 704, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_rock_path_tlcorner" type="Sprite" parent="."]
+
+position = Vector2( 320, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_rock_path_trcorner" type="Sprite" parent="."]
+
+position = Vector2( 416, 896 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 576, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_rock_path_brcorner" type="Sprite" parent="."]
+
+position = Vector2( 416, 992 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 640, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_rock_path_blcorner" type="Sprite" parent="."]
+
+position = Vector2( 320, 992 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 640, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_sand_path_bottomright" type="Sprite" parent="."]
+
+position = Vector2( 704, 800 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 512, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_sand_path_bottomright" type="Sprite" parent="."]
+
+position = Vector2( 1184, 800 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 512, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_sand_path_doctagon" type="Sprite" parent="."]
+
+position = Vector2( 1280, 800 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 832, 512, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_sand_path_tlangle" type="Sprite" parent="."]
+
+position = Vector2( 1280, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 832, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_sand_path_trangle" type="Sprite" parent="."]
+
+position = Vector2( 1376, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_sand_path_brangle" type="Sprite" parent="."]
+
+position = Vector2( 1376, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 448, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_sand_path_blangle" type="Sprite" parent="."]
+
+position = Vector2( 1280, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 832, 448, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_sand_path_dot" type="Sprite" parent="."]
+
+position = Vector2( 800, 800 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 512, 512, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_sand_path_tlcorner" type="Sprite" parent="."]
+
+position = Vector2( 800, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 512, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_sand_path_trcorner" type="Sprite" parent="."]
+
+position = Vector2( 896, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_sand_path_brcorner" type="Sprite" parent="."]
+
+position = Vector2( 896, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 448, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_sand_path_blcorner" type="Sprite" parent="."]
+
+position = Vector2( 800, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 512, 448, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_sand_path_dot" type="Sprite" parent="."]
+
+position = Vector2( 320, 800 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 512, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="plainsand_full" type="Sprite" parent="."]
+
+position = Vector2( 416, 800 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 512, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_sand_path_tlcorner" type="Sprite" parent="."]
+
+position = Vector2( 320, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_sand_path_trcorner" type="Sprite" parent="."]
+
+position = Vector2( 416, 608 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 384, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_sand_path_brcorner" type="Sprite" parent="."]
+
+position = Vector2( 416, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 448, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_sand_path_blcorner" type="Sprite" parent="."]
+
+position = Vector2( 320, 704 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 448, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_grass_path_bottomright" type="Sprite" parent="."]
+
+position = Vector2( 704, 512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_grass_path_bottomright" type="Sprite" parent="."]
+
+position = Vector2( 1184, 512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_grass_path_doctagon" type="Sprite" parent="."]
+
+position = Vector2( 1280, 512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 832, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_grass_path_tlangle" type="Sprite" parent="."]
+
+position = Vector2( 1280, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 832, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_grass_path_trangle" type="Sprite" parent="."]
+
+position = Vector2( 1376, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_grass_path_brangle" type="Sprite" parent="."]
+
+position = Vector2( 1376, 416 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 256, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_grass_path_blangle" type="Sprite" parent="."]
+
+position = Vector2( 1280, 416 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 832, 256, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_grass_path_dot" type="Sprite" parent="."]
+
+position = Vector2( 800, 512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 512, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_grass_path_tlcorner" type="Sprite" parent="."]
+
+position = Vector2( 800, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 512, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_grass_path_trcorner" type="Sprite" parent="."]
+
+position = Vector2( 896, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_grass_path_brcorner" type="Sprite" parent="."]
+
+position = Vector2( 896, 416 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 256, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_grass_path_blcorner" type="Sprite" parent="."]
+
+position = Vector2( 800, 416 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 512, 256, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_grass_path_dot" type="Sprite" parent="."]
+
+position = Vector2( 320, 512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="plaingrass_full" type="Sprite" parent="."]
+
+position = Vector2( 416, 512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_grass_path_tlcorner" type="Sprite" parent="."]
+
+position = Vector2( 320, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_grass_path_trcorner" type="Sprite" parent="."]
+
+position = Vector2( 416, 320 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 192, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_grass_path_brcorner" type="Sprite" parent="."]
+
+position = Vector2( 416, 416 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 256, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="dirt_grass_path_blcorner" type="Sprite" parent="."]
+
+position = Vector2( 320, 416 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 256, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_dirt_path_bottomright" type="Sprite" parent="."]
+
+position = Vector2( 704, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 448, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_dirt_path_bottomright" type="Sprite" parent="."]
+
+position = Vector2( 1184, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_dirt_path_doctagon" type="Sprite" parent="."]
+
+position = Vector2( 1280, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 832, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_dirt_path_tlangle" type="Sprite" parent="."]
+
+position = Vector2( 1280, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 832, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_dirt_path_trangle" type="Sprite" parent="."]
+
+position = Vector2( 1376, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 0, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_dirt_path_brangle" type="Sprite" parent="."]
+
+position = Vector2( 1376, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="rock_dirt_path_blangle" type="Sprite" parent="."]
+
+position = Vector2( 1280, 128 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 832, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="sand_dirt_path_dot" type="Sprite" parent="."]
+
+position = Vector2( 800, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 512, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="grass_dirt_path_dot" type="Sprite" parent="."]
+
+position = Vector2( 320, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="plaindirt_full" type="Sprite" parent="."]
+
+position = Vector2( 416, 224 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 256, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tree_bush" type="Sprite" parent="."]
+
+position = Vector2( 32, 1184 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 960, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tree_bush"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tree_bush/StaticBody2D"]
+
+scale = Vector2( 2.958, 2.958 )
+shape = SubResource( 1 )
+
+[node name="tree_littlebush" type="Sprite" parent="."]
+
+position = Vector2( 128, 1184 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1024, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tree_littlebush"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tree_littlebush/StaticBody2D"]
+
+scale = Vector2( 1.44133, 1.44133 )
+shape = SubResource( 2 )
+
+[node name="tree_palm" type="Sprite" parent="."]
+
+position = Vector2( 224, 1184 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1088, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tree_palm"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="tree_palm/StaticBody2D"]
+
+position = Vector2( -224.951, -1183.05 )
+build_mode = 0
+polygon = PoolVector2Array( 237.506, 1202.91, 246.543, 1164.62, 202.783, 1175.8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tree_circular" type="Sprite" parent="."]
+
+position = Vector2( 320, 1184 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1152, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tree_circular"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tree_circular/StaticBody2D"]
+
+scale = Vector2( 3.15036, 3.15036 )
+shape = SubResource( 3 )
+
+[node name="tree_pine" type="Sprite" parent="."]
+
+position = Vector2( 416, 1184 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1216, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="tree_pine"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tree_pine/StaticBody2D2"]
+
+rotation = 0.785398
+scale = Vector2( 2.07705, 2.07705 )
+shape = SubResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tree_rock1" type="Sprite" parent="."]
+
+position = Vector2( 512, 1184 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1280, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tree_rock1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tree_rock1/StaticBody2D"]
+
+position = Vector2( -15.7346, -9.4408 )
+build_mode = 0
+polygon = PoolVector2Array( -0.00567627, 21.2921, 30.834, 27.5859, 32.7222, 8.07507, 20.7639, -6.40076, 8.1763, -8.28894, -1.26443, 5.5575 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tree_rock2" type="Sprite" parent="."]
+
+position = Vector2( 608, 1184 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1344, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tree_rock3" type="Sprite" parent="."]
+
+position = Vector2( 704, 1184 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1408, 320, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+

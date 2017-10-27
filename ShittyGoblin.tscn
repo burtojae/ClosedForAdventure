@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://OverworldGoblin.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/ShittyGoblin.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/shittyMeat.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 17.482 )
+
+[node name="ShittyGoblin" type="Area2D"]
+
+position = Vector2( 843.094, 439.46 )
+scale = Vector2( 2, 2 )
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="ShittyGoblin" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="shittyMeat" type="Sprite" parent="."]
+
+visible = false
+position = Vector2( -9.3924, -4.41995 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="shitBox" type="CollisionShape2D" parent="."]
+
+position = Vector2( -6.3431, -4.16444 )
+scale = Vector2( 1.7066, 1.20332 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="body_entered" from="." to="." method="playerDetected"]
+
+

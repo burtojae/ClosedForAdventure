@@ -1,0 +1,354 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Graphics/wood_background.png" type="Texture" id=1]
+[ext_resource path="res://Buttons.gd" type="Script" id=2]
+[ext_resource path="res://Graphics/ShittyGoblin.png" type="Texture" id=3]
+[ext_resource path="res://Goblin.gd" type="Script" id=4]
+[ext_resource path="res://Graphics/ShittyGoblinArms-Blue.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/emptyFrame.png" type="Texture" id=6]
+[ext_resource path="res://Graphics/ShittyGoblinHead-blue.png" type="Texture" id=7]
+[ext_resource path="res://Graphics/ShittyGoblinFeets-Blue.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/ShittyGoblinBody-Blue.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/Player.png" type="Texture" id=10]
+[ext_resource path="res://PlayerCombat.gd" type="Script" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[node name="Main" type="Node"]
+
+[node name="wood_background" type="Sprite" parent="."]
+
+position = Vector2( 506.024, 383.912 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="buttons" type="Node" parent="."]
+
+script = ExtResource( 2 )
+
+[node name="head" type="Button" parent="buttons"]
+
+visible = false
+margin_left = 237.0
+margin_top = 492.0
+margin_right = 350.0
+margin_bottom = 555.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Head"
+flat = false
+
+[node name="legs" type="Button" parent="buttons"]
+
+visible = false
+margin_left = 93.0
+margin_top = 557.0
+margin_right = 230.0
+margin_bottom = 637.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Legs"
+flat = false
+
+[node name="arms" type="Button" parent="buttons"]
+
+visible = false
+margin_left = 238.0
+margin_top = 559.0
+margin_right = 353.0
+margin_bottom = 633.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Arms"
+flat = false
+
+[node name="chest" type="Button" parent="buttons"]
+
+visible = false
+margin_left = 97.0
+margin_top = 492.0
+margin_right = 226.0
+margin_bottom = 553.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Chest"
+flat = false
+
+[node name="attack" type="Button" parent="buttons"]
+
+margin_left = 119.0
+margin_top = 514.0
+margin_right = 357.0
+margin_bottom = 598.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Attack"
+flat = false
+_sections_unfolded = [ "Rect" ]
+
+[node name="overworld" type="Button" parent="buttons"]
+
+visible = false
+margin_left = 630.0
+margin_top = 514.0
+margin_right = 876.0
+margin_bottom = 607.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Overworld"
+flat = false
+_sections_unfolded = [ "Rect" ]
+
+[node name="restart" type="Button" parent="buttons"]
+
+visible = false
+margin_left = 630.0
+margin_top = 514.0
+margin_right = 876.0
+margin_bottom = 607.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "You Died. Restart?"
+flat = false
+_sections_unfolded = [ "Rect" ]
+
+[node name="stats" type="Button" parent="buttons"]
+
+margin_left = 453.0
+margin_top = 254.0
+margin_right = 640.0
+margin_bottom = 352.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Print Stats"
+flat = false
+
+[node name="ShittyGoblin" type="Sprite" parent="."]
+
+position = Vector2( 808.647, 304.949 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="goblinHealth" type="ProgressBar" parent="ShittyGoblin"]
+
+margin_left = -38.0
+margin_top = -47.0
+margin_right = 28.0
+margin_bottom = -31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+percent_visible = true
+_sections_unfolded = [ "Grow Direction" ]
+
+[node name="shitArms" type="AnimatedSprite" parent="ShittyGoblin"]
+
+visible = false
+position = Vector2( -4.59753, -18.3452 )
+frames = SubResource( 1 )
+animation = "default"
+frame = 1
+playing = true
+
+[node name="shitHead" type="AnimatedSprite" parent="ShittyGoblin"]
+
+visible = false
+position = Vector2( -4.07668, -18.2276 )
+frames = SubResource( 2 )
+animation = "default"
+playing = true
+
+[node name="shitFeet" type="AnimatedSprite" parent="ShittyGoblin"]
+
+visible = false
+position = Vector2( -4.59744, -18.2941 )
+frames = SubResource( 3 )
+animation = "default"
+frame = 1
+playing = true
+
+[node name="shitBody" type="AnimatedSprite" parent="ShittyGoblin"]
+
+visible = false
+position = Vector2( -3.92813, -18.6014 )
+frames = SubResource( 4 )
+animation = "default"
+playing = true
+
+[node name="Player" type="Sprite" parent="."]
+
+editor/display_folded = true
+position = Vector2( 212.242, 321.073 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PlayerHealth" type="ProgressBar" parent="Player"]
+
+margin_left = -30.0
+margin_top = -50.0
+margin_right = 38.0
+margin_bottom = -34.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+percent_visible = true
+
+[connection signal="mouse_entered" from="buttons/head" to="buttons" method="headHover"]
+
+[connection signal="mouse_exited" from="buttons/head" to="buttons" method="headUnHover"]
+
+[connection signal="pressed" from="buttons/head" to="buttons" method="headSelect"]
+
+[connection signal="mouse_entered" from="buttons/legs" to="buttons" method="legsHover"]
+
+[connection signal="mouse_exited" from="buttons/legs" to="buttons" method="legsUnHover"]
+
+[connection signal="pressed" from="buttons/legs" to="buttons" method="legsSelect"]
+
+[connection signal="mouse_entered" from="buttons/arms" to="buttons" method="armsHover"]
+
+[connection signal="mouse_exited" from="buttons/arms" to="buttons" method="armsUnHover"]
+
+[connection signal="pressed" from="buttons/arms" to="buttons" method="armsSelect"]
+
+[connection signal="mouse_entered" from="buttons/chest" to="buttons" method="chestHover"]
+
+[connection signal="mouse_exited" from="buttons/chest" to="buttons" method="chestUnHover"]
+
+[connection signal="pressed" from="buttons/chest" to="buttons" method="chestSelect"]
+
+[connection signal="pressed" from="buttons/attack" to="buttons" method="attackPressed"]
+
+[connection signal="pressed" from="buttons/overworld" to="buttons" method="returnToOverworld"]
+
+[connection signal="pressed" from="buttons/restart" to="buttons" method="restartLevel"]
+
+[connection signal="pressed" from="buttons/stats" to="buttons" method="printStats"]
+
+
