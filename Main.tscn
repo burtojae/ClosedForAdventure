@@ -76,8 +76,6 @@ rotation = 1.5708
 scale = Vector2( 1, 1.3073 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Node" type="Node" parent="."]
-
 [node name="Goblin" parent="." instance=ExtResource( 4 )]
 
 position = Vector2( 562.34, 126.035 )

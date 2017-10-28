@@ -50,7 +50,7 @@ collision_bounce = 0.0
 collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
-tile_data = PoolIntArray( 196633, 133, 262157, 135, 327681, -1610612603, 458773, -1073741691, 458781, 1610612870 )
+tile_data = PoolIntArray( 196633, 133, 262157, 135, 327681, -1610612603, 393238, 134, 458773, -1073741691, 458781, 1610612870 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -64,13 +64,17 @@ _sections_unfolded = [ "Range", "Transform" ]
 
 [node name="shadowTest2" parent="." instance=ExtResource( 3 )]
 
-position = Vector2( 1535.14, 138.203 )
+position = Vector2( 1532.06, 138.203 )
 energy = 1.0
 range_z_min = -1
 range_z_max = -1
 _sections_unfolded = [ "Range", "Transform" ]
 
-[node name="wall" parent="." instance=ExtResource( 4 )]
+[node name="walls" type="Node" parent="."]
+
+editor/display_folded = true
+
+[node name="wall" parent="walls" instance=ExtResource( 4 )]
 
 visible = false
 position = Vector2( 1079.53, 133 )
@@ -78,7 +82,7 @@ rotation = 1.5708
 scale = Vector2( 1, 1.35619 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="wall3" parent="." instance=ExtResource( 4 )]
+[node name="wall3" parent="walls" instance=ExtResource( 4 )]
 
 visible = false
 position = Vector2( 2183.06, 133 )
@@ -86,15 +90,17 @@ rotation = 1.5708
 scale = Vector2( 1, 1.35619 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="wall2" parent="." instance=ExtResource( 4 )]
+[node name="wall2" parent="walls" instance=ExtResource( 4 )]
 
+visible = false
 position = Vector2( 1066.02, 570 )
 rotation = 1.5708
 scale = Vector2( 1, 1.35619 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="wall4" parent="." instance=ExtResource( 4 )]
+[node name="wall4" parent="walls" instance=ExtResource( 4 )]
 
+visible = false
 position = Vector2( 2170.81, 570 )
 rotation = 1.5708
 scale = Vector2( 1, 1.35619 )
@@ -102,15 +108,15 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Goblin" parent="." instance=ExtResource( 5 )]
 
-position = Vector2( 1374.65, 398.351 )
+position = Vector2( 1382.85, 418.856 )
 
 [node name="Goblin2" parent="." instance=ExtResource( 5 )]
 
-position = Vector2( 1433.22, 337.204 )
+position = Vector2( 1451.67, 347.457 )
 
 [node name="Goblin3" parent="." instance=ExtResource( 5 )]
 
-position = Vector2( 1496.82, 394.174 )
+position = Vector2( 1498.87, 431.084 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
 
