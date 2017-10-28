@@ -9,7 +9,7 @@ func _process(delta):
 	if Global.currentGoblin == self.get_name():
 		currentGoblin = true
 	if currentGoblin == true:
-		$ShittyGoblin.visible = false
+		$Goblin.visible = false
 		$shittyMeat.visible = true
 
 func playerDetected( body ):

@@ -158,10 +158,13 @@ func returnToOverworld():
 
 
 func restartLevel():
-	#This isn't quite resetting right.
-	Global.shittyMeatOwned = Global.shittyMeatOwnedDefault
-	Global.deadGoblinsOverworld = Global.deadGoblinsOverworldDefault
-	Global.currentGoblin = Global.currentGoblinDefault
+	#This isn't quite resetting right. Killed goblins still dead
+	#after restart despite defaults being set here.
+	Global.shittyMeatOwned = 0
+	Global.deadGoblinsOverworld = []
+	Global.currentGoblin = ""
+	print(Global.deadGoblinsOverworld)
+	
 	get_tree().change_scene("res://Main.tscn")
 
 

@@ -3,7 +3,7 @@
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/environment_tiles.tres" type="TileSet" id=2]
 [ext_resource path="res://wall.tscn" type="PackedScene" id=3]
-[ext_resource path="res://ShittyGoblin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Goblin.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node"]
@@ -78,25 +78,21 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Node" type="Node" parent="."]
 
-[node name="ShittyGoblin" parent="." instance=ExtResource( 4 )]
+[node name="Goblin" parent="." instance=ExtResource( 4 )]
 
-position = Vector2( 216.773, 597.107 )
+position = Vector2( 562.34, 126.035 )
 
-[node name="ShittyGoblin2" parent="." instance=ExtResource( 4 )]
+[node name="Goblin2" parent="." instance=ExtResource( 4 )]
 
-position = Vector2( 583.042, 78.087 )
+position = Vector2( 164.554, 484.534 )
 
-[node name="ShittyGoblin3" parent="." instance=ExtResource( 4 )]
+[node name="Goblin3" parent="." instance=ExtResource( 4 )]
 
-position = Vector2( 609.32, 527.315 )
+position = Vector2( 761.234, 442.791 )
 
-[node name="ShittyGoblin4" parent="." instance=ExtResource( 4 )]
+[node name="Goblin4" parent="." instance=ExtResource( 4 )]
 
-position = Vector2( 867.703, 660.939 )
-
-[node name="ShittyGoblin5" parent="." instance=ExtResource( 4 )]
-
-position = Vector2( 962.196, 245.864 )
+position = Vector2( 589.246, 650.895 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 
