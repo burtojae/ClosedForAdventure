@@ -161,7 +161,7 @@ text = "Attack"
 flat = false
 _sections_unfolded = [ "Rect" ]
 
-[node name="overworld" type="Button" parent="buttons"]
+[node name="leave" type="Button" parent="buttons"]
 
 visible = false
 margin_left = 630.0
@@ -178,7 +178,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Overworld"
+text = "Leave"
 flat = false
 _sections_unfolded = [ "Rect" ]
 
@@ -259,7 +259,6 @@ visible = false
 position = Vector2( -4.59753, -18.3452 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
 playing = true
 
 [node name="shitHead" type="AnimatedSprite" parent="ShittyGoblin"]
@@ -268,6 +267,7 @@ visible = false
 position = Vector2( -4.07668, -18.2276 )
 frames = SubResource( 2 )
 animation = "default"
+frame = 1
 playing = true
 
 [node name="shitFeet" type="AnimatedSprite" parent="ShittyGoblin"]
@@ -276,7 +276,6 @@ visible = false
 position = Vector2( -4.59744, -18.2941 )
 frames = SubResource( 3 )
 animation = "default"
-frame = 1
 playing = true
 
 [node name="shitBody" type="AnimatedSprite" parent="ShittyGoblin"]
@@ -285,6 +284,7 @@ visible = false
 position = Vector2( -3.92813, -18.6014 )
 frames = SubResource( 4 )
 animation = "default"
+frame = 1
 playing = true
 
 [node name="Player" type="Sprite" parent="."]
@@ -345,7 +345,7 @@ percent_visible = true
 
 [connection signal="pressed" from="buttons/attack" to="buttons" method="attackPressed"]
 
-[connection signal="pressed" from="buttons/overworld" to="buttons" method="returnToOverworld"]
+[connection signal="pressed" from="buttons/leave" to="buttons" method="returnToLevel"]
 
 [connection signal="pressed" from="buttons/restart" to="buttons" method="restartLevel"]
 

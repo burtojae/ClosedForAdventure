@@ -16,6 +16,8 @@ func playerDetected( body ):
 	if body.is_in_group("player"):
 		if currentGoblin == false:
 			Global.currentGoblin = self.get_name()
+			Global.currentMainScenePath = "res://" + get_tree().get_current_scene().get_name() + ".tscn"
+			print(Global.currentMainScenePath)
 			get_tree().change_scene("res://Combat.tscn")
 		else:
 			Global.shittyMeatOwned += 1
