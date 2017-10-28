@@ -1,18 +1,36 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://OverworldGoblin.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/ShittyGoblin.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/GoblinSprite.png" type="Texture" id=2]
 [ext_resource path="res://Graphics/shittyMeat.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 17.482 )
+extents = Vector2( 14.2212, 17.482 )
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "idle"
+length = 0.4
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("ShittyGoblin:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7, 4 ]
+}
 
 [node name="ShittyGoblin" type="Area2D"]
 
 position = Vector2( 843.094, 439.46 )
-scale = Vector2( 2, 2 )
+scale = Vector2( 0.25, 0.25 )
 input_pickable = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -26,22 +44,44 @@ _sections_unfolded = [ "Transform" ]
 [node name="ShittyGoblin" type="Sprite" parent="."]
 
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+vframes = 4
+hframes = 2
+frame = 4
+_sections_unfolded = [ "Animation", "Transform" ]
 
 [node name="shittyMeat" type="Sprite" parent="."]
 
 visible = false
-position = Vector2( -9.3924, -4.41995 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="shitBox" type="CollisionShape2D" parent="."]
 
-position = Vector2( -6.3431, -4.16444 )
-scale = Vector2( 1.7066, 1.20332 )
+position = Vector2( 12.8625, 0 )
+scale = Vector2( 4.55565, 7.52466 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="goblinAnimator" type="AnimationPlayer" parent="."]
+
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+root_node = NodePath("..")
+anims/idle = SubResource( 2 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="idleTimer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
 [connection signal="body_entered" from="." to="." method="playerDetected"]
+
+[connection signal="timeout" from="idleTimer" to="." method="_on_idleTimer_timeout"]
 
 

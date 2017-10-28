@@ -21,3 +21,6 @@ func playerDetected( body ):
 			Global.shittyMeatOwned += 1
 			Global.deadGoblinsOverworld.append(self.get_name())
 			self.queue_free()
+
+func _on_idleTimer_timeout():
+		$goblinAnimator.play("idle")
