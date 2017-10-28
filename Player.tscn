@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://PlayerWalk.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/dirt.png" type="Texture" id=2]
 [ext_resource path="res://Graphics/chefSheet.png" type="Texture" id=3]
+[ext_resource path="res://PlayerCam.gd" type="Script" id=4]
 
 [sub_resource type="Gradient" id=1]
 
@@ -170,7 +171,9 @@ tracks/1/keys = {
 "values": [ false, true, false ]
 }
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
 
 position = Vector2( 257.88, 145.413 )
 scale = Vector2( 0.25, 0.25 )
@@ -236,11 +239,11 @@ _sections_unfolded = [ "Rect" ]
 anchor_mode = 1
 rotating = false
 current = true
-zoom = Vector2( 1.2, 1.2 )
+zoom = Vector2( 0.8, 0.8 )
 limit_left = -100000
 limit_top = -100000
 limit_right = 100000
-limit_bottom = 600
+limit_bottom = 100000
 limit_smoothed = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
@@ -253,6 +256,7 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+script = ExtResource( 4 )
 _sections_unfolded = [ "Limit", "Smoothing", "Transform" ]
 
 [node name="playerHitbox" type="CollisionShape2D" parent="."]

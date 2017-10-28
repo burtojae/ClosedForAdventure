@@ -52,6 +52,7 @@ _sections_unfolded = [ "Animation", "Transform" ]
 [node name="shittyMeat" type="Sprite" parent="."]
 
 visible = false
+scale = Vector2( 5, 5 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
