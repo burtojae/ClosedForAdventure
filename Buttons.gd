@@ -2,8 +2,8 @@ extends Node
 
 func _process(delta):
 	if $"../ShittyGoblin".health <= 0:
-		$overworld.visible = true
-		$overworld.disabled = false
+		$leave.visible = true
+		$leave.disabled = false
 	elif $"../Player".health <= 0:
 		$restart.visible = true
 		$restart.disabled = false
@@ -153,19 +153,16 @@ func chestSelect():
 	attackReset()
 
 
-func returnToOverworld():
-	get_tree().change_scene("res://Main.tscn")
+func returnToLevel():
+	get_tree().change_scene(Global.currentMainScenePath)
 
 
 func restartLevel():
-	#This isn't quite resetting right. Killed goblins still dead
-	#after restart despite defaults being set here.
 	Global.shittyMeatOwned = 0
 	Global.deadGoblinsOverworld = []
 	Global.currentGoblin = ""
-	print(Global.deadGoblinsOverworld)
 	
-	get_tree().change_scene("res://Main.tscn")
+	get_tree().change_scene(Global.currentMainScenePath)
 
 
 func printStats():
