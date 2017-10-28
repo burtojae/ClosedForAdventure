@@ -4,7 +4,7 @@
 [ext_resource path="res://Graphics/environment_tiles.tres" type="TileSet" id=2]
 [ext_resource path="res://shadowTest.tscn" type="PackedScene" id=3]
 [ext_resource path="res://wall.tscn" type="PackedScene" id=4]
-[ext_resource path="res://ShittyGoblin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Goblin.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=6]
 
 [node name="Main" type="Node"]
@@ -110,7 +110,7 @@ position = Vector2( 1433.22, 337.204 )
 
 [node name="ShittyGoblin3" parent="." instance=ExtResource( 5 )]
 
-position = Vector2( 2038.16, 383.921 )
+position = Vector2( 1496.82, 394.174 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
 
