@@ -25,4 +25,6 @@ func playerDetected( body ):
 			self.queue_free()
 
 func _on_idleTimer_timeout():
-		$goblinAnimator.play("idle")
+	randomize()
+	$idleTimer.wait_time = randi() % 10 + 2
+	$goblinAnimator.play("idle")

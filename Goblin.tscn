@@ -56,7 +56,7 @@ scale = Vector2( 5, 5 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="shitBox" type="CollisionShape2D" parent="."]
+[node name="goblinHitBox" type="CollisionShape2D" parent="."]
 
 position = Vector2( 12.8625, 0 )
 scale = Vector2( 4.55565, 7.52466 )
