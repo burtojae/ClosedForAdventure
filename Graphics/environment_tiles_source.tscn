@@ -12,12 +12,12 @@ radius = 10.0
 custom_solver_bias = 0.0
 radius = 10.0
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=4]
 
 custom_solver_bias = 0.0
 radius = 10.0
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
@@ -1428,7 +1428,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tree_circular/StaticBody2D"]
 
 scale = Vector2( 3.15036, 3.15036 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="tree_pine" type="Sprite" parent="."]
 
@@ -1452,7 +1452,7 @@ bounce = 0.0
 
 rotation = 0.785398
 scale = Vector2( 2.07705, 2.07705 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="tree_rock1" type="Sprite" parent="."]
