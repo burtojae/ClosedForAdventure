@@ -1,5 +1,5 @@
 extends KinematicBody2D
-
+#Start 2:30 Pm
 func _ready():
 	#Puts the player near the fallen Goblin's meat.
 	if Global.currentGoblin:
@@ -14,6 +14,7 @@ func _fixed_process(delta):
 	
 	#Walk up.
 	if Input.is_action_pressed("up"):
+		$swingArea.rotation_deg = 180
 		direction.y -= 1
 		if $playerAnimator.is_playing() == false:
 			$playerAnimator.play("up")
@@ -23,6 +24,7 @@ func _fixed_process(delta):
 
 	#Walk down.
 	if Input.is_action_pressed("down"):
+		$swingArea.rotation_deg = 0
 		direction.y += 1
 		if $playerAnimator.is_playing() == false:
 			$playerAnimator.play("down")
@@ -32,6 +34,7 @@ func _fixed_process(delta):
 	
 	#Walk left
 	if Input.is_action_pressed("left"):
+		$swingArea.rotation_deg = 90
 		direction.x -= 1
 		if $playerAnimator.is_playing() == false:
 			$playerAnimator.play("left")
@@ -41,6 +44,7 @@ func _fixed_process(delta):
 	
 	#Walk right.
 	if Input.is_action_pressed("right"):
+		$swingArea.rotation_deg = -90
 		direction.x += 1
 		if $playerAnimator.is_playing() == false:
 			$playerAnimator.play("right")

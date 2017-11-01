@@ -27,7 +27,9 @@ tracks/0/keys = {
 "values": [ 4, 5, 6, 7, 4 ]
 }
 
-[node name="Goblin" type="Area2D"]
+[node name="Goblin" type="Area2D" groups=[
+"enemies",
+]]
 
 position = Vector2( 843.094, 439.46 )
 scale = Vector2( 0.25, 0.25 )
