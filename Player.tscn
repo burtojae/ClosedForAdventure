@@ -145,7 +145,7 @@ tracks/1/keys = {
 "values": [ false, true, false ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=8]
 
 resource_name = "swing"
 length = 0.25
@@ -163,7 +163,7 @@ tracks/0/keys = {
 "values": [ 2, 3, 4 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 
 length = 0.7
 loop = false
@@ -191,7 +191,7 @@ tracks/1/keys = {
 "values": [ false, true, false ]
 }
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=10]
 
 custom_solver_bias = 0.0
 extents = Vector2( 107.109, 179.474 )
@@ -299,8 +299,8 @@ root_node = NodePath("..")
 anims/down = SubResource( 5 )
 anims/left = SubResource( 6 )
 anims/right = SubResource( 7 )
-anims/swing = SubResource( 10 )
-anims/up = SubResource( 8 )
+anims/swing = SubResource( 8 )
+anims/up = SubResource( 9 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -309,6 +309,7 @@ _sections_unfolded = [ "Playback", "playback" ]
 
 [node name="swingArea" type="Area2D" parent="."]
 
+visible = false
 position = Vector2( 2.1615, 54.6801 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -327,11 +328,10 @@ __meta__ = {
 [node name="swingHitbox" type="CollisionShape2D" parent="swingArea"]
 
 position = Vector2( -4.89099, 147.566 )
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="Player" type="Sprite" parent="swingArea"]
 
-visible = false
 position = Vector2( -21.0987, 133.279 )
 rotation = 1.5708
 scale = Vector2( 4.73501, 4.46614 )
