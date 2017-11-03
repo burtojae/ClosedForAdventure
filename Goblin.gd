@@ -7,7 +7,7 @@ func _process(delta):
 	$goblinHealth.value = health
 func attackHead():
 	$"../Player".health -= 2 * strength
-	print("Go for the eyes!")
+	print("Go for the eyes!!!!!!!!")
 func attackArms():
 	$"../Player".health -= 2 * strength
 	$"../Player".strength -= 1
